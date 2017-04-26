@@ -1,0 +1,13 @@
+<!-- app/view/list.nj -->
+<html>
+  <head>
+    <title>eggblog</title>
+  </head>
+  <body>
+    <div class="news-view view">
+        <div class="item">
+          <h1>hello eggblog</h1>
+        </div>
+    </div>
+  </body>
+</html>

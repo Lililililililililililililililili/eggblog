@@ -3,7 +3,10 @@
 module.exports = app => {
   class HomeController extends app.Controller {
     * index() {
-      this.ctx.body = 'hi, egg';
+      const data = { name: 'eggblog'};
+      // this.ctx.body = 'hi, egg';
+      yield this.ctx.render('list.nj');
+      // this.ctx.body = yield this.ctx.renderView()
     }
     * query() {
       // this.ctx.body = 'hello world!';
