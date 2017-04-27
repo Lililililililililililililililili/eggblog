@@ -1,21 +1,50 @@
-<!-- app/view/list.nj -->
+<!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eggblog</title>
+    <!--<link href="https://cdn.bootcss.com/tether/1.4.0/css/tether.min.css" rel="stylesheet">-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="news-view view">
-        <div class="item">
-          <h1>hello eggblog</h1>
-          <br>
-          <h2>{{ id }}</h2>
-          <br>
-          <h2>{{ name }}</h2>
-          <br>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+      <div class="navbar-header navbar-left">
+        <a class="navbar-brand" href="#">eggblog</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">注册</a></li>
+          <li class=""><a href="#">登录</a></li>
+          <!--<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">hello1</a></li>
+              <li><a href="#">hello2</a></li>
+              <li><a href="#">hello3</a></li>
+              <li class="divider">华丽分割线</li>
+              <li><a href="#">hello4</a></li>
+              <li class="divider">华丽分割线</li>
+            </ul>
+          </li>-->
+        </ul>
+      </div>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+          <h1 class="col-md-4">hello eggblog</h1>
+          <h2 class="col-md-4">{{ id }}</h2>
+          <h2 class="col-md-4">{{ name }}</h2>
         </div>
         {% for item in list %}
         <div><a href="{{ item.url }}">{{ item.title}}</a><span>{{ helper.relativeTime(1616841540) }}</span></div>
         {% endfor %}
     </div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/tether/1.4.0/js/tether.min.js"></script>-->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
