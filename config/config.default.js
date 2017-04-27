@@ -76,11 +76,13 @@ module.exports = appInfo => {
       mapping: {
         '.nj': 'nunjucks',
       }
-    }
+    },
+
+    keys: this.name + '_1491308060962_5324'
   };
 
   // should change to your own
-  config.keys = appInfo.name + '_1491308060962_5324';
+  // config.keys = appInfo.name + '_1491308060962_5324';
 
   return config;
 };

@@ -3,13 +3,14 @@
 module.exports = app => {
   class HomeController extends app.Controller {
     * index() {
-      const data = { name: 'eggblog'};
-      // this.ctx.body = 'hi, egg';
-      yield this.ctx.render('list.nj');
-      // this.ctx.body = yield this.ctx.renderView()
+      const data = { 
+        name: 'eggblog',
+        id: '123456',
+        interest: 'eat'  
+    };
+      yield this.ctx.render('list.nj', data);
     }
     * query() {
-      // this.ctx.body = 'hello world!';
        const type = this.query.type;
        const q = this.query.q || 'nodejs';
        if(type === 'bing') {
@@ -26,10 +27,9 @@ module.exports = app => {
           { id: 3, title: 'this is news 3', url: '/news/3' },
         ],
       };
-      yield this.ctx.render('list.tpl', dataList);
+      yield this.ctx.render('list.nj', dataList);
     }
     * data(data) {
-      // console.log(require('../../config/config.test.js').prod);
       this.ctx.body = 'hello, ' + decodeURIComponent(data.url.substring(1));
     }
   }
